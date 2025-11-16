@@ -1,0 +1,56 @@
+:root{
+   --bg:#fffefe;
+   --card:#b2acac;
+   --accent:#2012a1; 
+   --muted:#000000;
+   --max-width:1100px;
+   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+*{box-sizing: border-box;}
+html,body{height: 80%;}
+body{
+    margin:0;
+    background:var(--bg);
+    color:#111010;
+    line-height: 1.45;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+} 
+
+.container{max-width:var(--max-width);margin:0 auto;padding: 35px;}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.site-title{font-size: 1.6em}
+.main-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:12px}
+.main-nav a{color:var(--muted);text-decoration:none}
+.main-nav a:focus, .main-nav a:hover{text-decoration:underline}
+
+
+.hero{background:linear-gradient(90deg, rgba(62, 64, 63, 0.08), rgba(11,132,87,0.03));padding:32px;border-radius: 8px;margin-bottom: 10px;}
+.hero-inner h2{font-size:1.6rem;margin:0 0 8px}
+.lead{color:var(--muted)}
+.primary-cta{display:inline-block;margin-top:12px;padding:10px 18px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none}
+.primary-cta:focus{outline:3px solid rgba(114, 116, 115, 0.25)}
+
+
+.card{background:var(--card);padding:20px;border-radius:10px;margin-bottom:18px;box-shadow:0 2px 8px rgba(4,8,15,0.04)}
+.sim-form{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center}
+.sim-form label{font-weight:600}
+.sim-form input, .sim-form select{padding:8px;border-radius:6px;border:1px solid #767c7d}
+.sim-form .inline{display:inline-block;margin-right:8px}
+.btn{grid-column:1 / -1;padding:10px 14px;border-radius:8px;background:transparent;border:2px solid var(--accent);color:var(--accent);cursor:pointer}
+.btn:focus{outline:3px solid rgba(76, 80, 78, 0.18)}
+.result{margin-top:12px}
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+
+@media (max-width:800px){
+   .sim-form{grid-template-columns:1fr;}
+   .header-inner{flex-direction:column;gap:10px;align-items:flex-start}
+}
+
+
+@media (max-width:480px){
+    .container{padding:16px}
+    .site-title{font-size:1.2rem}
+    .hero-inner h2{font-size:1.1rem}
+}
+
